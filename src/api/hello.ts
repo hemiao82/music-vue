@@ -1,7 +1,7 @@
 import request from  "./request"
 export function holle(params:object){
-    request({
-        url: "holle",
+  return  request({
+        url: "/holle",
         method: 'get',
         params
       })

@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const baseURL = import.meta.env.VITE_API_HOST
-console.log(baseURL,"接口地址")
 const serviceAxios = axios.create({
     baseURL, // 基础请求地址
     timeout: 10000, // 请求超时设置
@@ -32,17 +31,17 @@ const serviceAxios = axios.create({
 //   );
 
 
-  // 创建响应拦截
-serviceAxios.interceptors.response.use(
-    (res) => {
-      let data = res.data;
-      // 处理自己的业务逻辑，比如判断 token 是否过期等等
-      // 代码块
-      return data;
-    },
-    (error) => {
+//   // 创建响应拦截
+// serviceAxios.interceptors.response.use(
+//     (res) => {
+//       let data = res.data;
+//       // 处理自己的业务逻辑，比如判断 token 是否过期等等
+//       // 代码块
+//       return data;
+//     },
+//     (error) => {
      
-      return Promise.reject("请求失败");
-    }
-  );
+//       return Promise.reject("请求失败");
+//     }
+//   );
 export default serviceAxios

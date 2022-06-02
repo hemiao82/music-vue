@@ -12,7 +12,7 @@ let msg = ref("音乐成功前端");
 let count = ref(0);
 let hi = () => {
   holle().then((res:any) => {
-   msg.value=res
+   msg.value=res.data
   });
 };
 </script>
